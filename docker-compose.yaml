@@ -1,0 +1,12 @@
+version: '3'
+services: 
+    vue:
+        build: 
+            context: ./
+            dockerfile: ./docker/vue/Dockerfile
+        image: vue_client:v1
+    envoy:
+        build: 
+            context: ./
+            dockerfile: ./docker/envoy/Dockerfile
+        image: grpc_golang/envoy:v1                
